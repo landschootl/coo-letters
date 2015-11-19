@@ -10,7 +10,7 @@ public class PromissoryNote extends Letter<MoneyContent> {
 
 	@Override
 	public double getCost() {
-		return 1 + ((1/100)*this.content.getAmount());
+		return BASE_COST + ((1/100)*this.content.getAmount());
 				}
 
 	@Override

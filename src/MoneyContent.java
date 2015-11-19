@@ -11,5 +11,8 @@ public class MoneyContent extends Content {
 		return amount;
 	}
 	
+public String toString(){
+	return Double.toString(this.amount);
+}
 	
 }

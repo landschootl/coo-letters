@@ -4,7 +4,7 @@ import java.util.List;
 public class City {
 	protected String name;
 	protected List<Inhabitant> inhabitants;
-	protected List<Letter<Content>> postbox;
+	protected List<Letter<?>> postbox;
 	
 	public City(String name) {
 		this.name = name;
@@ -24,7 +24,7 @@ public class City {
 		return name;
 	}
 
-	public void setPostbox(List<Letter<Content>> postbox) {
+	public void setPostbox(List<Letter<?>> postbox) {
 		this.postbox = postbox;
 	}
 	
@@ -33,13 +33,13 @@ public class City {
 		this.inhabitants.add(inhabitant);
 	}
 	
-	public void sendLetter(Letter<Content> letter){
+	public void sendLetter(Letter<?> letter){
 		this.postbox.add(letter);
 		letter.getSender().getBankAccount().debit(letter.getCost());
 	}
 	
 	public void distributeLetters(){
-		for(Letter<Content> letter : postbox){
+		for(Letter<?> letter : postbox){
 			letter.doAction();
 			postbox.remove(letter);
 		}

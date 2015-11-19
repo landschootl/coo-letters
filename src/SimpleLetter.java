@@ -1,6 +1,6 @@
 
 public class SimpleLetter extends Letter<TextContent>{
-	protected final int COST_SIMPLE = 1;
+
 
 public SimpleLetter(String content){
 	super();
@@ -9,7 +9,7 @@ public SimpleLetter(String content){
 
 @Override
 public double getCost() {
-	return COST_SIMPLE;
+	return BASE_COST;
 }
 
 @Override
