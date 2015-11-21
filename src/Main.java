@@ -1,3 +1,6 @@
+import letter.type.PromissoryNote;
+import letter.type.RegisteredLetter;
+
 
 public class Main {
 	public static void main(String []args) {

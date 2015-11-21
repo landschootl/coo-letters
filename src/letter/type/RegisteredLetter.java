@@ -1,10 +1,12 @@
+package letter.type;
+import letter.Letter;
+import letter.content.LetterContent;
 
 public class RegisteredLetter extends Letter<LetterContent>{
 
 	public RegisteredLetter(Letter<?> content){
 		super();
 		this.content = new LetterContent(content);
-
 	}
 	
 	@Override
@@ -19,9 +21,6 @@ public class RegisteredLetter extends Letter<LetterContent>{
 														+this.getContent()+"whose content is"
 														+this.getContent().getLetter().getContent().toString());
 		this.receiver.getCity().sendLetter(aknowledgment);
-
-		
 	}
-	
 
 }

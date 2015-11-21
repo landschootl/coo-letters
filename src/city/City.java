@@ -1,5 +1,10 @@
+package city;
+
+import inhabitant.Inhabitant;
+
 import java.util.List;
 
+import letter.Letter;
 
 public class City {
 	protected String name;
@@ -18,7 +23,6 @@ public class City {
 	public List<Inhabitant> getInhabitants() {
 		return inhabitants;
 	}
-
 
 	public String getName() {
 		return name;

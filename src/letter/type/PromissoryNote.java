@@ -1,7 +1,8 @@
+package letter.type;
+import letter.Letter;
+import letter.content.MoneyContent;
 
 public class PromissoryNote extends Letter<MoneyContent> {
-	
-	
 	
 	public PromissoryNote(double content) {
 		super();
@@ -11,7 +12,7 @@ public class PromissoryNote extends Letter<MoneyContent> {
 	@Override
 	public double getCost() {
 		return BASE_COST + ((1/100)*this.content.getAmount());
-				}
+	}
 
 	@Override
 	public void doAction() {
@@ -20,6 +21,5 @@ public class PromissoryNote extends Letter<MoneyContent> {
 		SimpleLetter thanksLetter = new SimpleLetter ("Thanks for a promissory note letter whose content is a money content"+this.content.getAmount());
 		this.receiver.getCity().sendLetter(thanksLetter);
 	}
-
 	
 }

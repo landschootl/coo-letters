@@ -1,3 +1,6 @@
+package inhabitant;
+import bankAccount.BankAccount;
+import city.City;
 
 public class Inhabitant {
 	protected String name;

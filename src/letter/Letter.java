@@ -1,3 +1,6 @@
+package letter;
+import inhabitant.Inhabitant;
+import letter.content.Content;
 
 public abstract class Letter <C extends Content> {
 	protected C content;

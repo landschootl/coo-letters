@@ -1,3 +1,6 @@
+package bankAccount;
+
+import inhabitant.Inhabitant;
 
 public class BankAccount {
 	protected double amount;
