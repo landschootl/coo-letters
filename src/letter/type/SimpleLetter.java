@@ -5,8 +5,7 @@ import letter.content.TextContent;
 public class SimpleLetter extends Letter<TextContent>{
 
 	public SimpleLetter(String content){
-		super();
-		this.content = new TextContent(content);
+		super(new TextContent(content));
 	}
 	
 	@Override

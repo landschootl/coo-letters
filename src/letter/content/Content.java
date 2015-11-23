@@ -1,5 +1,7 @@
 package letter.content;
 
-public class Content {
+public abstract class Content {
+	
+	public abstract String toString();
 
 }

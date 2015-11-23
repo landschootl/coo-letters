@@ -13,10 +13,11 @@ public class City {
 	
 	public City(String name) {
 		this.name = name;
+		System.out.println("Creating "+name+" city");
 	}
 
 	public City(String name, List<Inhabitant> inhabitants) {
-		this.name = name;
+		this(name);
 		this.inhabitants = inhabitants;
 	}
 
@@ -32,9 +33,15 @@ public class City {
 		this.postbox = postbox;
 	}
 	
-	
 	public void addInhabitant(Inhabitant inhabitant){
 		this.inhabitants.add(inhabitant);
+		System.out.println("Creating 1 inhabitant");
+	}
+	
+	public void addInhabitants(int nbInhabitants){
+		for(int i=1; i<nbInhabitants+1; i++)
+			this.inhabitants.add(new Inhabitant("inhabitant-"+i, this));
+		System.out.println("Creating "+nbInhabitants+" inhabitants");
 	}
 	
 	public void sendLetter(Letter<?> letter){
@@ -48,4 +55,12 @@ public class City {
 			postbox.remove(letter);
 		}
 	}
+	
+	public void collectLetters(){
+		int nbInhabitant = (int) (Math.random()*inhabitants.size());
+		for(int i=0; i<nbInhabitant; i++){
+			
+		}
+	}
+	
 }

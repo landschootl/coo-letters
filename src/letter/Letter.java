@@ -8,6 +8,10 @@ public abstract class Letter <C extends Content> {
 	protected Inhabitant receiver;
 	protected final float BASE_COST = 1;
 	
+	public Letter(C content){
+		this.content = content;
+	}
+	
 	public C getContent() {
 		return content;
 	}

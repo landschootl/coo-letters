@@ -12,4 +12,10 @@ public class LetterContent extends Content{
 		super();
 		this.letter= letter;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

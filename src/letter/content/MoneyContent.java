@@ -13,6 +13,7 @@ public class MoneyContent extends Content {
 	}
 	
 	public String toString(){
+		// TODO Auto-generated method stub
 		return Double.toString(this.amount);
 	}
 	

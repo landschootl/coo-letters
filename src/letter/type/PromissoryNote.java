@@ -5,8 +5,7 @@ import letter.content.MoneyContent;
 public class PromissoryNote extends Letter<MoneyContent> {
 	
 	public PromissoryNote(double content) {
-		super();
-		this.content = new MoneyContent(content);
+		super(new MoneyContent(content));
 	}
 
 	@Override

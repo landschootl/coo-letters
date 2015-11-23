@@ -5,8 +5,7 @@ import letter.content.LetterContent;
 public class RegisteredLetter extends Letter<LetterContent>{
 
 	public RegisteredLetter(Letter<?> content){
-		super();
-		this.content = new LetterContent(content);
+		super(new LetterContent(content));
 	}
 	
 	@Override
