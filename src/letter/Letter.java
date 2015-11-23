@@ -6,8 +6,8 @@ public abstract class Letter <C extends Content> {
 	protected C content;
 	protected Inhabitant sender;
 	protected Inhabitant receiver;
-	protected final int BASE_COST = 1;
-
+	protected final float BASE_COST = 1;
+	
 	public C getContent() {
 		return content;
 	}

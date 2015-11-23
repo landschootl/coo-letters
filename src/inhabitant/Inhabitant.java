@@ -7,11 +7,11 @@ public class Inhabitant {
 	protected City city;
 	protected BankAccount bankAccount;
 	
-	public Inhabitant(String name, City city, BankAccount bankAccount) {
+	public Inhabitant(String name, City city) {
 		super();
 		this.name = name;
 		this.city = city;
-		this.bankAccount = bankAccount;
+		this.bankAccount = new BankAccount(this);
 	}
 
 	public String getName() {
