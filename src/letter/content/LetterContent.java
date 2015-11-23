@@ -16,6 +16,6 @@ public class LetterContent extends Content{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return null;
+		return "whose content is " + this.letter;
 	}
 }

@@ -8,8 +8,10 @@ public abstract class Letter <C extends Content> {
 	protected Inhabitant receiver;
 	protected final float BASE_COST = 1;
 	
-	public Letter(C content){
+	public Letter(C content, Inhabitant sender, Inhabitant receiver){
 		this.content = content;
+		this.sender = sender;
+		this.receiver = receiver;
 	}
 	
 	public C getContent() {
@@ -38,5 +40,12 @@ public abstract class Letter <C extends Content> {
 
 	public abstract double getCost();
 	
-	public abstract void doAction();
+	public void doAction(){
+		
+		reallyDoAction();
+	}
+	
+	public abstract void reallyDoAction();
+	
+	public abstract String toString();
 }

@@ -10,7 +10,7 @@ public class TextContent extends Content{
 	
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.text;
+		return "whose content is a text content (" + this.text + ")";
 	}
 	
 }
