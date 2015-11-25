@@ -1,12 +1,7 @@
 import city.City;
 
-
 public class Main {
-	public static void main(String []args) {
-//		PromissoryNote letter = new PromissoryNote(25);
-//		RegisteredLetter letter2 = new RegisteredLetter(letter);
-//		System.out.println(letter2.getSender());
-		
+	public static void main(String []args) {		
 		City city = new City("Annoeullin");
 		city.addInhabitants(100);
 		int kJours = 6;

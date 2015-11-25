@@ -1,20 +1,19 @@
 package letter.content;
 
-public class MoneyContent extends Content {
-	protected double amount;
+/**
+ * Class which represents the money contained in a letter.
+ * @author landschoot
+ *
+ */
+public class MoneyContent extends Content<Integer> {
 
-	public MoneyContent(double amount) {
-		super();
-		this.amount = amount;
-	}
-
-	public double getAmount() {
-		return amount;
+	public MoneyContent(int amount) {
+		super(amount);
 	}
 	
 	public String toString(){
 		// TODO Auto-generated method stub
-		return "whose content is a money content (" + this.amount + ")";
+		return "whose content is a money content (" + this.content + ")";
 	}
 	
 }

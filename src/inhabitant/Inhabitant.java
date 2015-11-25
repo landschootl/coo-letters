@@ -2,6 +2,11 @@ package inhabitant;
 import bankAccount.BankAccount;
 import city.City;
 
+/**
+ * Class which represents an inhabitants.
+ * @author landschoot
+ *
+ */
 public class Inhabitant {
 	protected String name;
 	protected City city;

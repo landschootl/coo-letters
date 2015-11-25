@@ -1,26 +1,29 @@
 package letter.type;
-import inhabitant.Inhabitant;
 import letter.Letter;
-import letter.content.LetterContent;
 
-public class RegisteredLetter extends Letter<LetterContent>{
+/**
+ * Class which represents a registered letter containing a letter content.
+ * @author landschoot
+ *
+ */
+public class RegisteredLetter<T extends Letter<?>> extends DecoratorLetter<T>{
 
-	public RegisteredLetter(Letter<?> content, Inhabitant sender, Inhabitant receiver){
-		super(new LetterContent(content), sender, receiver);
+	public RegisteredLetter(T letter){
+		super(letter, letter.getSender(), letter.getReceiver());
+		if(letter instanceof UrgentLetter || letter instanceof RegisteredLetter)
+			throw new IllegalArgumentException("letter is an UrgentLetter");
 	}
 	
 	@Override
-	public double getCost() {
-		return this.content.getLetter().getCost() + 15;
+	public int getCost() {
+		return this.content.getContent().getCost() + 15;
 	}
 
 	@Override
-	public void reallyDoAction() {
-		this.content.getLetter().doAction();
-		SimpleLetter aknowledgment = new SimpleLetter ("Aknowlegment of receipt for a registered letter whose content is a"
-														+this.getContent()+"whose content is"
-														+this.getContent().getLetter().getContent().toString(), sender, receiver);
-		this.receiver.getCity().sendLetter(aknowledgment);
+	public void doAction() {
+		this.content.getContent().doAction();
+		SimpleLetter aknowledgment = new AknowledgmentLetter (receiver, sender,this.getContent(),this.getContent().getContent().getContent());
+		this.sender.getCity().sendLetter(aknowledgment);
 	}
 
 	@Override

@@ -1,21 +1,21 @@
 package letter.content;
 import letter.Letter;
 
-public class LetterContent extends Content{
-	protected Letter<?> letter;
-
-	public Letter<?> getLetter() {
-		return letter;
-	}
+/**
+ * Class which represents the letter contained in a letter.
+ * @author landschoot
+ *
+ */
+public class LetterContent extends Content<Letter<?>>{
 
 	public LetterContent(Letter<?> letter){
-		super();
-		this.letter= letter;
+		super(letter);
 	}
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "whose content is " + this.letter;
+		return "whose content is " + this.content;
 	}
+	
 }

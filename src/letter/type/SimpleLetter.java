@@ -3,6 +3,11 @@ import inhabitant.Inhabitant;
 import letter.Letter;
 import letter.content.TextContent;
 
+/**
+ * Class which represents a simple letter containing a text content.
+ * @author landschoot
+ *
+ */
 public class SimpleLetter extends Letter<TextContent>{
 
 	public SimpleLetter(String content, Inhabitant sender, Inhabitant receiver){
@@ -10,12 +15,12 @@ public class SimpleLetter extends Letter<TextContent>{
 	}
 	
 	@Override
-	public double getCost() {
+	public int getCost() {
 		return BASE_COST;
 	}
 	
 	@Override
-	public void reallyDoAction() {
+	public void doAction() {
 		// TODO Auto-generated method stub
 		
 	}
