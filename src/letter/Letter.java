@@ -14,6 +14,13 @@ public abstract class Letter <C extends Content<?>> {
 	protected Inhabitant receiver;
 	protected final int BASE_COST = 1;
 	
+	/**
+	 * Constructor of the class Letter
+	 * 
+	 * @param content
+	 * @param sender
+	 * @param receiver
+	 */
 	public Letter(C content, Inhabitant sender, Inhabitant receiver){
 		this.content = content;
 		this.sender = sender;
@@ -40,22 +47,43 @@ public abstract class Letter <C extends Content<?>> {
 		return content;
 	}
 
+	/**
+	 * This method enable to change the Content of the letter
+	 * @param content
+	 */
 	public void setContent(C content) {
 		this.content = content;
 	}
 
+	/**
+	 * This method return the sender of the letter
+	 * @return sender
+	 */
 	public Inhabitant getSender() {
 		return sender;
 	}
 
+	/**
+	 * This method enable to change the sender of the letter
+	 * @param sender
+	 */
 	public void setSender(Inhabitant sender) {
 		this.sender = sender;
 	}
 
+	
+	/**
+	 * This method return the receiver of the letter
+	 * @return receiver
+	 */
 	public Inhabitant getReceiver() {
 		return receiver;
 	}
 
+	/**
+	 * This method enable to change the receiver of the letter
+	 * @param receiver
+	 */
 	public void setReceiver(Inhabitant receiver) {
 		this.receiver = receiver;
 	}

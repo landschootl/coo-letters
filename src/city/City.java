@@ -19,6 +19,12 @@ public class City {
 	protected List<Letter<?>> postbox = new ArrayList<>();
 	protected LetterFactory letterFactory = new LetterFactory();
 	
+	
+	
+	/**
+	 * Constructor of City class. this one take only one parameter.
+	 * @param owner
+	 */
 	public City(String name) {
 		this.name = name;
 		System.out.println("Creating "+name+" city");
@@ -93,14 +99,26 @@ public class City {
 		return postbox.isEmpty();
 	}
 	
+	/**
+	 * This function return Inhabitant array list
+	 * @return inhabitants
+	 */
 	public List<Inhabitant> getInhabitants() {
 		return inhabitants;
 	}
 
+	/**
+	 * This function return the name of the city
+	 * @return name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * This function return postbox array list
+	 * @return postbox
+	 */
 	public List<Letter<?>> getPostbox() {
 		return this.postbox;
 	}

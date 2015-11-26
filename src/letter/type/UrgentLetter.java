@@ -10,11 +10,18 @@ import letter.content.LetterContent;
  */
 public class UrgentLetter extends Letter<LetterContent>{
 
+	/**
+	 * Constructor of the class UrgentLetter.
+	 * @param letter
+	 */
 	public UrgentLetter(NotUrgentLetter<?> letter) {
 		super(new LetterContent(letter), letter.getSender(), letter.getReceiver());
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * This function return the price for send an Urgentletter.
+	 */
 	@Override
 	public int getCost() {
 		// TODO Auto-generated method stub
@@ -27,6 +34,9 @@ public class UrgentLetter extends Letter<LetterContent>{
 		this.content.getContent().doAction();
 	}
 
+	/**
+	 * this function show the description of UrgentLetter
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

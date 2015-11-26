@@ -1,24 +1,25 @@
 package letter.content;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 
-public class MoneyContentLetter {
+public class MoneyContentLetter extends ContentTest<Integer, MoneyContent>{
 
 	@Before
 	public void setUp() throws Exception {
+		value = 10;
+		content = new MoneyContent(value);
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	@Override
+	public void testToString() {
+		assertEquals("whose content is a money content (10)", content.toString());
 	}
 
 }

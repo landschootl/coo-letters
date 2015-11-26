@@ -1,24 +1,20 @@
 package letter.type;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import letter.Letter;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+public class ThanksLetterTest extends SimpleLetterTest{
 
-public class ThanksLetterTest {
-
-	@Before
-	public void setUp() throws Exception {
+	@Override
+	public Letter<?> createLetter() {
+		// TODO Auto-generated method stub
+		return new ThanksLetter(sender, receiver, 10);
 	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
+	
+	@Override
+	public void testToString() {
+		// TODO Auto-generated method stub
+		assertEquals("a thanks letter wich is a simple letter whose content is a text content (thanks for a promissory note letter whose content is a money content 10.0)", letter.toString());
 	}
 
 }

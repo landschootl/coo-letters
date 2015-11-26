@@ -1,7 +1,3 @@
-import inhabitant.Inhabitant;
-import letter.type.RegisteredLetter;
-import letter.type.SimpleLetter;
-import letter.type.UrgentLetter;
 import city.City;
 
 public class Main {
@@ -31,7 +27,7 @@ public class Main {
 //		UrgentLetter letter3 = new UrgentLetter(new RegisteredLetter(new SimpleLetter("bla bla", sender, receiver)));
 //		RegisteredLetter letter4 = new RegisteredLetter(new SimpleLetter("bla bla", sender, receiver));
 //		RegisteredLetter letter5 = new RegisteredLetter(new RegisteredLetter(new SimpleLetter("bla bla", sender, receiver)));
-//		RegisteredLetter letter5 = new RegisteredLetter(new UrgentLetter(new SimpleLetter("bla bla", sender, receiver)));
+//		RegisteredLetter letter6 = new RegisteredLetter(new UrgentLetter(new SimpleLetter("bla bla", sender, receiver)));
 	}
 
 }

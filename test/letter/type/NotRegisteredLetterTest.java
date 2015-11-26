@@ -1,12 +1,13 @@
-package factoryMethod;
+package letter.type;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
+import letter.content.Content;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LetterFactoryTest {
+public abstract class NotRegisteredLetterTest<T extends Content<?>> extends NotUrgentLetterTest<T>{
 
 	@Before
 	public void setUp() throws Exception {

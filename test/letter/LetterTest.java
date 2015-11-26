@@ -1,5 +1,6 @@
 package letter;
 
+import factoryMethod.LetterFactory;
 import inhabitant.Inhabitant;
 
 import org.junit.After;
@@ -13,6 +14,7 @@ public abstract class LetterTest {
 	protected Inhabitant sender;
 	protected Inhabitant receiver;
 	protected Letter<?> letter;
+	protected LetterFactory factory;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -20,6 +22,7 @@ public abstract class LetterTest {
 		sender = new Inhabitant("Ludovic", city);
 		receiver = new Inhabitant("Dylan", city);
 		letter = createLetter();
+		factory = new LetterFactory();
 	}
 	
 	public abstract Letter<?> createLetter();

@@ -9,10 +9,19 @@ import letter.content.TextContent;
  */
 public class SimpleLetter extends NotRegisteredLetter<TextContent>{
 
+	/**
+	 * Constructor of the class Simple Letter
+	 * @param content
+	 * @param sender
+	 * @param receiver
+	 */
 	public SimpleLetter(String content, Inhabitant sender, Inhabitant receiver){
 		super(new TextContent(content), sender, receiver);
 	}
 	
+	/**
+	 * This function return the price for send a Simpleletter.
+	 */
 	@Override
 	public int getCost() {
 		return BASE_COST;
@@ -24,6 +33,9 @@ public class SimpleLetter extends NotRegisteredLetter<TextContent>{
 		
 	}
 	
+	/**
+	 * this function show the description of SimpleLetter
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

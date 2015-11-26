@@ -8,10 +8,17 @@ import letter.Letter;
  */
 public class LetterContent extends Content<Letter<?>>{
 
+	/**
+	 * Consctructor of the class LetterContent.
+	 * @param letter
+	 */
 	public LetterContent(Letter<?> letter){
 		super(letter);
 	}
 
+	/**
+	 * this function show the description of LetterContent
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

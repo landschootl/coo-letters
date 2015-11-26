@@ -9,10 +9,18 @@ package letter.content;
 public abstract class Content<C> {
 	protected C content;
 	
+	/**
+	 * constructor of the class content
+	 * @param content
+	 */
 	public Content(C content){
 		this.content = content;
 	}
 	
+	/**
+	 * this 
+	 * @return
+	 */
 	public C getContent() {
 		return content;
 	}
