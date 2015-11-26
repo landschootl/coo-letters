@@ -17,6 +17,7 @@ public class City {
 	protected String name;
 	protected List<Inhabitant> inhabitants = new ArrayList<>();
 	protected List<Letter<?>> postbox = new ArrayList<>();
+	protected LetterFactory letterFactory = new LetterFactory();
 	
 	public City(String name) {
 		this.name = name;
@@ -79,9 +80,17 @@ public class City {
 			int idReceiver;
 			do{
 				idReceiver = (int) (Math.random()*inhabitants.size());
-			} while(idReceiver==idSender);
-			sendLetter(LetterFactory.getInstance().createAleaLetter(inhabitants.get(idSender), inhabitants.get(idReceiver)));
+			} while(idReceiver!=idSender);
+			sendLetter(letterFactory.createAleaLetter(inhabitants.get(idSender), inhabitants.get(idReceiver)));
 		}
+	}
+	
+	/**
+	 * function which indicates if the postbox is empty.
+	 * @return boolean : if postbox is empty.
+	 */
+	public boolean postboxIsEmpty(){
+		return postbox.isEmpty();
 	}
 	
 	public List<Inhabitant> getInhabitants() {

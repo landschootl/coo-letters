@@ -1,6 +1,5 @@
 package letter.type;
 import inhabitant.Inhabitant;
-import letter.Letter;
 import letter.content.MoneyContent;
 
 /**
@@ -8,10 +7,10 @@ import letter.content.MoneyContent;
  * @author landschoot
  *
  */
-public class PromissoryNoteLetter extends Letter<MoneyContent> {
+public class PromissoryNoteLetter extends NotRegisteredLetter<MoneyContent>{
 	
-	public PromissoryNoteLetter(int content, Inhabitant sender, Inhabitant receiver) {
-		super(new MoneyContent(content), sender, receiver);
+	public PromissoryNoteLetter(int amount, Inhabitant sender, Inhabitant receiver) {
+		super(new MoneyContent(amount), sender, receiver);
 	}
 
 	@Override

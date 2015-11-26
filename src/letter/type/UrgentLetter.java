@@ -1,19 +1,18 @@
 package letter.type;
 
 import letter.Letter;
+import letter.content.LetterContent;
 
 /**
  * Class which represents an urgent letter containing a letter content.
  * @author landschoot
  *
  */
-public class UrgentLetter<T extends Letter<?>> extends DecoratorLetter<T>{
+public class UrgentLetter extends Letter<LetterContent>{
 
-	public UrgentLetter(T letter) {
-		super(letter, letter.getSender(), letter.getReceiver());
+	public UrgentLetter(NotUrgentLetter<?> letter) {
+		super(new LetterContent(letter), letter.getSender(), letter.getReceiver());
 		// TODO Auto-generated constructor stub
-		if(letter instanceof UrgentLetter)
-			throw new IllegalArgumentException("Error type of letter invalide.");
 	}
 
 	@Override

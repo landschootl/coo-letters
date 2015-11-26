@@ -14,7 +14,7 @@ public class UrgentLetterTest {
 	@Test
 	public void whatAmITesting() {
 		SimpleLetter simpleLetter = new SimpleLetter("bla bla", sender, receiver);
-		UrgentLetter<SimpleLetter> letter = new UrgentLetter<SimpleLetter>(simpleLetter);
+		UrgentLetter letter = new UrgentLetter(simpleLetter);
 		
 		//@SuppressWarnings("unused")
 		//TextContent textContent = letter.getContent().getContent();

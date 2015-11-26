@@ -1,6 +1,5 @@
 package letter.type;
 import inhabitant.Inhabitant;
-import letter.Letter;
 import letter.content.TextContent;
 
 /**
@@ -8,7 +7,7 @@ import letter.content.TextContent;
  * @author landschoot
  *
  */
-public class SimpleLetter extends Letter<TextContent>{
+public class SimpleLetter extends NotRegisteredLetter<TextContent>{
 
 	public SimpleLetter(String content, Inhabitant sender, Inhabitant receiver){
 		super(new TextContent(content), sender, receiver);

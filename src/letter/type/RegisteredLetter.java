@@ -1,17 +1,15 @@
 package letter.type;
-import letter.Letter;
+import letter.content.LetterContent;
 
 /**
  * Class which represents a registered letter containing a letter content.
  * @author landschoot
  *
  */
-public class RegisteredLetter<T extends Letter<?>> extends DecoratorLetter<T>{
+public class RegisteredLetter extends NotUrgentLetter<LetterContent>{
 
-	public RegisteredLetter(T letter){
-		super(letter, letter.getSender(), letter.getReceiver());
-		if(letter instanceof UrgentLetter || letter instanceof RegisteredLetter)
-			throw new IllegalArgumentException("letter is an UrgentLetter");
+	public RegisteredLetter(NotRegisteredLetter<?> letter){
+		super(new LetterContent(letter), letter.getSender(), letter.getReceiver());
 	}
 	
 	@Override

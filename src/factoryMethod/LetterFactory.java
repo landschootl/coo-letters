@@ -4,6 +4,8 @@ import inhabitant.Inhabitant;
 import letter.Letter;
 import letter.content.Content;
 import letter.type.AknowledgmentLetter;
+import letter.type.NotRegisteredLetter;
+import letter.type.NotUrgentLetter;
 import letter.type.PromissoryNoteLetter;
 import letter.type.RegisteredLetter;
 import letter.type.SimpleLetter;
@@ -11,13 +13,6 @@ import letter.type.ThanksLetter;
 import letter.type.UrgentLetter;
 
 public class LetterFactory {
-	private static LetterFactory instance = null;
-	
-	public static LetterFactory getInstance(){
-		if(instance==null)
-			instance=new LetterFactory();
-		return instance;
-	}
 	
 	public SimpleLetter createSimpleLetter(Inhabitant sender, Inhabitant receiver){
 		return new SimpleLetter("bla bla", sender, receiver);
@@ -35,17 +30,17 @@ public class LetterFactory {
 		return new PromissoryNoteLetter((int) (Math.random()*100)+1, sender, receiver);
 	}
 	
-	public RegisteredLetter<?> createRegisteredLetter(Inhabitant sender, Inhabitant receiver){
-		Letter<?> letter;
+	public RegisteredLetter createRegisteredLetter(Inhabitant sender, Inhabitant receiver){
+		NotRegisteredLetter<?> letter;
 		if((int) (Math.random()*2)==0)
 			letter = createSimpleLetter(sender, receiver);
 		else
 			letter = createPromissoryNoteLetter(sender, receiver);
-		return new RegisteredLetter<Letter<?>>(letter);
+		return new RegisteredLetter(letter);
 	}
 	
-	public UrgentLetter<?> createUrgentLetter(Inhabitant sender, Inhabitant receiver){
-		Letter<?> letter;
+	public UrgentLetter createUrgentLetter(Inhabitant sender, Inhabitant receiver){
+		NotUrgentLetter<?> letter;
 		int rand = (int) (Math.random()*3); 
 		if(rand==0)
 			letter = createSimpleLetter(sender, receiver);
@@ -53,7 +48,7 @@ public class LetterFactory {
 			letter = createPromissoryNoteLetter(sender, receiver);
 		else
 			letter = createRegisteredLetter(sender, receiver);
-		return new UrgentLetter<Letter<?>>(letter);
+		return new UrgentLetter(letter);
 	}
 	
 	public Letter<?> createAleaLetter(Inhabitant sender, Inhabitant receiver){
